@@ -1,0 +1,112 @@
+
+.header{
+  position: relative;
+  /* height: 70vh; */
+  padding: 6.5em 6.5em 6.5em 3.3em;
+  background-image: url(../public/media/narutobg.jpg);
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-color: black;
+  background-position: top right;
+  display: grid;
+  gap: 3vw;
+  align-items: center;
+  align-content: center;
+  justify-content: start;
+}
+.hoverWrapper{
+  display:grid;
+  grid-template-columns:repeat(7, 1fr);
+  width:auto;
+  position:relative;
+  gap:5em 9em;
+}
+.hoverCircle{
+  position: relative;
+  width:15px;
+  height:15px;
+  border-radius:999px;
+  justify-self:center;
+  position:relative;
+}
+.hoverLogo{
+  font-family: "naruto", sans-serif;
+  font-size: 9vw;
+  margin: 0;
+  color: azure;
+  letter-spacing: 0.6vw;
+}
+.hoverSlogan{
+  font-family: 'VT323',monospace;
+  font-size: 2.5vw;
+  text-align: center;
+  margin: 0;
+  color: var(--orange);
+  letter-spacing: 1px;
+}
+.hoverRasengan{
+  width:100%;
+  height: auto;
+  aspect-ratio: 1;
+  border-radius:100%;
+}
+
+
+
+.topCharactersSection{
+  width: 95vw;
+  display: flex;
+  background-color: black;
+  justify-items: center;
+  /* padding: 1em 0; */
+  flex-wrap: wrap;
+  gap: 4em;
+  justify-content: center;
+  max-width: 1072px;
+  margin: 3vw;
+}
+
+.famCard{
+  display: grid;
+  position: relative;
+  overflow: hidden;
+  border-radius: 5%;
+  width: clamp(50px,15vw,160px);
+  height: clamp(50px,25vw,200px);
+  background-color: var(--orange);
+  cursor: var(--pointer);
+  background-size: auto 100%;
+  background-position: center;
+  box-shadow: 1px 1px 9px white;
+  transition: all 0.2s ease;
+  animation: 0.2s linear 0s infinite alternate pointer;
+
+}
+.famCard:hover{
+  box-shadow: 0px 0px 20px white;
+  background-size: auto 107%;
+}
+.famname{
+  color: white;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  padding: 0.7em 0.7em;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: linear-gradient(0deg, black, transparent);
+  margin: 0;
+  justify-content: flex-end;
+  font-size: x-large;
+  font-family: Garamond;
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+.famCard > img{
+  transition: transform 0.3s ease-in;
+}
+.famCard:hover > img{
+  transform: scale(1.2);
+}

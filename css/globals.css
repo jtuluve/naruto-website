@@ -1,0 +1,136 @@
+@font-face {
+  font-family: naruto;
+  src: url("../public/fonts/naruto.ttf");
+}
+@font-face {
+  font-family: VT323;
+  src: url("../public/fonts/VT323.ttf");
+}
+@font-face {
+  font-family: CinzelDecorative;
+  src: url("../public/fonts/CinzelDecorative.ttf");
+}
+
+
+
+:root{
+  --darkblue: #00003C;
+  --gray: #584B58;
+  --chillred: #E43410;
+  --orange: #ff8f00;
+  --pink: #EB4E85;
+  --pointer: url(../public/cursors/pointer-0.cur) 20 30, pointer;
+  --pointer2:  url(../public/cursors/pointer-1.cur) 20 30, pointer;
+  --cursor: url(../public/cursors/image.cur), auto;
+  --cursorNotAllowed: url(../public/cursors/not-allowed.png), not-allowed;
+}
+html{
+  cursor: var(--cursor);
+}
+body{
+  /* box-sizing: border-box; */
+  background-color: black;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+a{
+  text-decoration: none;
+  cursor: var(--pointer);
+  animation: 0.2s linear 0s infinite alternate pointer;
+  transition: all 0.5s linear;
+}
+.menu-wrapper{
+  background-color: #f4c077;
+  background-image: linear-gradient(to right, #ffa11d, #feb855);
+  padding: 0.3em;
+  position: relative;
+  z-index: 100;
+}
+.menu-wrapper ul{
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  justify-content: flex-start;
+  gap:1.3em;
+  position: relative;
+  height: 2em;
+  margin-right: 1.2em;
+}
+
+
+.menu-wrapper li{
+  font-size: 1.3em;
+  position: relative;
+}
+
+.logo{
+  margin-right: auto;
+  font-family: "naruto";
+  letter-spacing: 0.1vw;
+  font-size: 1.6em !important;
+  color: deepskyblue;
+  text-shadow: 2px 1px 1px black, -1px 0px 1px white;
+}
+.logo::after{
+  position: absolute;
+  top: 0;
+  content: "";
+  height: 100%;
+  width: 1.4em;
+  font-size: 1em;
+  background: center/contain no-repeat url("../public/media/rasengan.png");
+}
+.other{
+  display: flex;
+  flex-direction: column;
+  gap:0.2em;
+  position: relative;
+  border:5px solid transparent;
+}
+.other p{
+  font-size: 1.3em;
+  margin: 0;
+}
+.other > p{
+  background-color: rgb(215, 215, 215);
+  padding: 0.2em 0.5em;
+  border-radius: 0.5em;
+}
+.other > p:hover{
+  background-color: #002d85;
+  color: orange;
+}
+.other-list > p{
+  line-height: 1.4;
+  padding:0.15em 0.5em;
+}
+.other-list p:hover{
+  background-color: rgb(215, 215, 215);
+}
+.other-list{
+  visibility: hidden;
+  position: absolute;
+  top:2.2em;
+  right:0;
+  background-color: rgb(255, 204, 153);
+  border-radius: 0.4em;
+  padding: 0;
+  overflow: hidden;
+  z-index: 1;
+  transition: visibility 1s ease;
+}
+.other:hover> .other-list{
+  visibility: visible;
+}
+
+
+/* animations */
+@keyframes pointer{
+  from{
+    cursor: var(--pointer);
+  }
+  to{
+    cursor: var(--pointer2);
+  }
+}

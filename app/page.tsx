@@ -1,95 +1,67 @@
 import Image from 'next/image'
-import styles from './page.module.css'
-
+import '../css/page.css'
+import { Courgette } from 'next/font/google'
+import Script from 'next/script';
+import FewFamousChar from "../public/scripts/topCharacters"
+const courgette = Courgette({
+  weight: '400',
+  subsets: ["latin"]
+}
+);
 export default function Home() {
+  
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
+    <>
+      <header className="header">
+        {/* <div className="hoverWrapper">
+          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
+          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
+          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
+          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
+          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
+          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
+          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
+          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
+          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
+          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
+          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
+          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
+          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
+          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
+          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
+          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
+          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
+          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
+          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
+          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
+          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
+          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
+          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
+          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
+          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
+          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
+          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
+          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
+          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
+          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
+          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
+          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
+          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
+          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
+          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
+        </div> */}
+        <h1 className="hoverLogo">NARUTOVERSE</h1>
+        <h4 className="hoverSlogan">The encyclopedia of anime/manga series "Naruto"</h4>
+      </header>
+      <hr style={{rotate:"-1deg",margin:"1vw 0"}}/>
+      <hr style={{rotate:"5deg",margin:"0 0 6vw"}}/>
+      <div style={{backgroundColor:"black",display:"grid",justifyContent:"center"}}>
+        <h1 style={{justifySelf:"flex-start",marginLeft:"clamp(20px,3vw,60px)",fontSize:"clamp(35px,3vw,70px)",color:"white",letterSpacing:"2px"}}>Top Characters</h1>
+      <section className='topCharactersSection'>
+        <FewFamousChar/>
+      </section>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+      <Script src='scripts/hoverCircle.js'/>
+  </>
   )
 }
