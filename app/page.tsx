@@ -9,59 +9,29 @@ const courgette = Courgette({
 }
 );
 export default function Home() {
-  
+
   return (
     <>
       <header className="header">
-        {/* <div className="hoverWrapper">
-          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
-          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
-          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
-          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
-          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
-          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
-          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
-          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
-          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
-          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
-          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
-          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
-          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
-          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
-          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
-          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
-          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
-          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
-          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
-          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
-          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
-          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
-          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
-          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
-          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
-          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
-          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
-          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
-          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
-          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
-          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
-          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
-          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
-          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
-          <div className="hoverCircle"><Image className="hoverRasengan" src="/media/rasengan.gif" height={1200} width={1200} alt=""/></div>
-        </div> */}
-        <h1 className="hoverLogo">NARUTOVERSE</h1>
-        <h4 className="hoverSlogan">The encyclopedia of anime/manga series "Naruto"</h4>
+        <h1 className="headerLogo">NARUTOVERSE</h1>
+        <h4 className="headerSlogan">The encyclopedia of anime/manga series "Naruto"</h4>
       </header>
-      <hr style={{rotate:"-1deg",margin:"1vw 0"}}/>
-      <hr style={{rotate:"5deg",margin:"0 0 6vw"}}/>
-      <div style={{backgroundColor:"black",display:"grid",justifyContent:"center"}}>
-        <h1 style={{justifySelf:"flex-start",marginLeft:"clamp(20px,3vw,60px)",fontSize:"clamp(35px,3vw,70px)",color:"white",letterSpacing:"2px"}}>Top Characters</h1>
-      <section className='topCharactersSection'>
-        <FewFamousChar/>
+      <section className="mcWrapper">
+        <div className="mcRedBox"></div>
+        <h1 className="mcNameBehind"><span className="mcspan1">NARUTO</span> <span className="mcspan2">UZUMAKI</span></h1>
+        <img alt="Naruto" className="mcImg" src="/media/narutoSageMode.png"/>
+        <h1 className="mcNameFront">NARUTO UZUMAKI</h1>
+        <h1 className="mcHeading">The protagonist</h1>
+        <p className="mcPara"><span style={{ fontSize: "150%" }}>Naruto Uzumaki</span>, a resilient ninja, overcame a lonely past and the immense suffering he endured, to become a symbol of determination. With the Nine-Tailed Fox's power within him, he inspired others, forged strong bonds, and showed the strength of hope. Naruto's unwavering spirit made him a legendary hero in anime.</p>
       </section>
-      </div>
-      <Script src='scripts/hoverCircle.js'/>
-  </>
+      <hr style={{ rotate: "-1deg", margin: "1vw 0", border: "1px solid #808080a6" }} />
+      <section style={{ backgroundColor: "black", display: "grid", justifyContent: "center", maxWidth: "1200px", margin: "auto", marginTop: "5vw" }}>
+        <h1 style={{ justifySelf: "flex-start", marginLeft: "clamp(20px,3vw,60px)", fontSize: "clamp(25px,3vw,70px)", color: "white", letterSpacing: "2px" }}>Top Characters</h1>
+        <div className='topCharactersSection'>
+          <FewFamousChar />
+        </div>
+      </section>
+      <Script src='scripts/hoverCircle.js' />
+    </>
   )
 }

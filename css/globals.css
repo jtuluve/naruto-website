@@ -26,11 +26,12 @@
 }
 html{
   cursor: var(--cursor);
+  scroll-behavior: smooth;
 }
 body{
   /* box-sizing: border-box; */
   background-color: black;
-  height: 100vh;
+  height: auto;
   padding: 0;
   margin: 0;
 }
@@ -38,41 +39,61 @@ a{
   text-decoration: none;
   cursor: var(--pointer);
   animation: 0.2s linear 0s infinite alternate pointer;
-  transition: all 0.5s linear;
+  transition: all 0.2s linear;
 }
+
+
 .menu-wrapper{
-  background-color: #f4c077;
-  background-image: linear-gradient(to right, #ffa11d, #feb855);
+  background-color: #5d5d5d38;
+  /* background-image: linear-gradient(to right, #ffa11d, #feb855); */
   padding: 0.3em;
-  position: relative;
+  position: sticky;
+  transition: all 0.2s ease;
+  top: -10px;
   z-index: 100;
+  border-bottom: 1px solid #424242;
+  backdrop-filter: blur(4px);
+  /* mix-blend-mode: difference; */
 }
 .menu-wrapper ul{
   display: flex;
   align-items: center;
   list-style-type: none;
   justify-content: flex-start;
-  gap:1.3em;
+  gap: 1.3em;
   position: relative;
   height: 2em;
   margin-right: 1.2em;
+  color: wheat;
 }
-
-
 .menu-wrapper li{
-  font-size: 1.3em;
+  font-size: min(2vw,20px);
   position: relative;
+  padding: 5px;
+  /* overflow: hidden; */
+  border-radius: 5px;
 }
-
+/* .menu-wrapper li:not([class*="logo"]):hover{
+  background-color: navajowhite;
+  color: black;
+} */
+.menu-wrapper a {
+  padding: 5px;
+  border-radius: 5px;
+}
+.menu-wrapper a:hover {
+  background-color: navajowhite;
+  color: black;
+}
 .logo{
   margin-right: auto;
   font-family: "naruto";
   letter-spacing: 0.1vw;
-  font-size: 1.6em !important;
-  color: deepskyblue;
+  font-size: 2vw !important;
+  color: white;
   text-shadow: 2px 1px 1px black, -1px 0px 1px white;
 }
-.logo::after{
+/* .logo::after{
   position: absolute;
   top: 0;
   content: "";
@@ -80,20 +101,20 @@ a{
   width: 1.4em;
   font-size: 1em;
   background: center/contain no-repeat url("../public/media/rasengan.png");
-}
+} */
 .other{
   display: flex;
   flex-direction: column;
-  gap:0.2em;
+  gap: 0.2em;
   position: relative;
-  border:5px solid transparent;
+  /* border: 5px solid transparent; */
 }
 .other p{
-  font-size: 1.3em;
+  font-size: min(2vw,20px);
   margin: 0;
 }
 .other > p{
-  background-color: rgb(215, 215, 215);
+  background-color: slategray;
   padding: 0.2em 0.5em;
   border-radius: 0.5em;
 }
@@ -101,24 +122,26 @@ a{
   background-color: #002d85;
   color: orange;
 }
-.other-list > p{
-  line-height: 1.4;
-  padding:0.15em 0.5em;
-}
-.other-list p:hover{
-  background-color: rgb(215, 215, 215);
-}
 .other-list{
   visibility: hidden;
   position: absolute;
-  top:2.2em;
-  right:0;
-  background-color: rgb(255, 204, 153);
+  top: 2.2em;
+  right: 0;
+  background-color: rgb(87 29 0/60%);
   border-radius: 0.4em;
   padding: 0;
   overflow: hidden;
   z-index: 1;
   transition: visibility 1s ease;
+}
+.other-list > p{
+  line-height: 1.4;
+  padding:0.15em 0.5em;
+  color: navajowhite;
+}
+.other-list p:hover{
+  color: black;
+  background-color: navajowhite;
 }
 .other:hover> .other-list{
   visibility: visible;

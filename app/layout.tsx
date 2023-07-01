@@ -1,10 +1,10 @@
 import '../css/globals.css'
-import {Courgette} from 'next/font/google'
+import { Courgette } from 'next/font/google'
 const courgette = Courgette({
-  weight:'400',
+  weight: '400',
   subsets: ["latin"]
 }
-); 
+);
 export const metadata = {
   title: 'Narutoverse',
   description: 'Get all informations about Narutoverse',
@@ -26,18 +26,20 @@ export default function RootLayout({
         <nav className="menu-wrapper">
           <ul>
             <li className='logo'>Narutoverse</li>
-            <a><li>Home</li></a>
-            <a><li>Characters</li></a>
-            <a><li>Clans</li></a>
-            <div className='other'>
-              <p>Other</p>
-              <div className='other-list'>
-                <p>Tailed Beasts</p>
-                <p>Teams</p>
-                <p>Villages</p>
-                <p>Kekkeigenkai</p>
+            <li><a>Home</a></li>
+            <li><a>Characters</a></li>
+            <li><a>Clans</a></li>
+            <li>
+              <div className='other'>
+                <p>Other</p>
+                <div className='other-list'>
+                  <p>Tailed Beasts</p>
+                  <p>Teams</p>
+                  <p>Villages</p>
+                  <p>Kekkeigenkai</p>
+                </div>
               </div>
-            </div>
+            </li>
             {/* <ul className="other-list">
               <li>Tailed Beasts</li>
               <li>Teams</li>
