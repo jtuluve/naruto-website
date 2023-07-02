@@ -21,6 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="shortcut icon" href="media/n.ico" type="image/x-icon" />
       </head>
       <body>
         <nav className="menu-wrapper">

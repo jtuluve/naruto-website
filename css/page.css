@@ -128,10 +128,8 @@ body{
   position: relative;
   overflow: hidden;
   border-radius: 5%;
-  width: clamp(50px,15vw,160px);
-  min-width: 150px;
-  min-height: 225px;
-  height: clamp(50px,25vw,200px);
+  width: clamp(109px,15vw,160px);
+  height: clamp(167px,25vw,200px);
   background-color: var(--orange);
   cursor: var(--pointer);
   background-size: auto 100%;
