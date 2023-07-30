@@ -37,16 +37,27 @@ body{
 }
 a{
   text-decoration: none;
+  color:inherit;
   cursor: var(--pointer);
   animation: 0.2s linear 0s infinite alternate pointer;
   transition: all 0.2s linear;
 }
+a:hover{
+  cursor: var(--pointer);
+  animation: 0.2s linear 0s infinite alternate pointer;
+}
 
-
+a:visited{
+  color:inherit;
+}
+a:active{
+  color:inherit;
+}
 .menu-wrapper{
+  display: flex;
   background-color: #5d5d5d38;
   /* background-image: linear-gradient(to right, #ffa11d, #feb855); */
-  padding: 0.3em;
+  padding: 0.3em 1em;
   position: sticky;
   transition: all 0.2s ease;
   top: -10px;
@@ -59,17 +70,14 @@ a{
   display: flex;
   align-items: center;
   list-style-type: none;
-  justify-content: flex-start;
   gap: 1.3em;
   position: relative;
-  height: 2em;
   margin-right: 1.2em;
   color: wheat;
 }
-.menu-wrapper li{
-  font-size: min(2vw,20px);
+.menu-wrappers li{
+  font-size: max(2vw,20px);
   position: relative;
-  padding: 5px;
   /* overflow: hidden; */
   border-radius: 5px;
 }
@@ -77,11 +85,11 @@ a{
   background-color: navajowhite;
   color: black;
 } */
-.menu-wrapper a {
+.menu-wrapper li a {
   padding: 5px;
   border-radius: 5px;
 }
-.menu-wrapper a:hover {
+.menu-wrapper li a:hover {
   background-color: navajowhite;
   color: black;
 }
@@ -89,9 +97,10 @@ a{
   margin-right: auto;
   font-family: "naruto";
   letter-spacing: 0.1vw;
-  font-size: 2vw !important;
+  font-size: min(3vw,27px);
   color: white;
   text-shadow: 2px 1px 1px black, -1px 0px 1px white;
+  margin: auto auto auto 0;
 }
 /* .logo::after{
   position: absolute;
@@ -105,17 +114,15 @@ a{
 .other{
   display: flex;
   flex-direction: column;
-  gap: 0.2em;
   position: relative;
   /* border: 5px solid transparent; */
 }
 .other p{
-  font-size: min(2vw,20px);
   margin: 0;
 }
 .other > p{
   background-color: slategray;
-  padding: 0.2em 0.5em;
+  padding: 5px;
   border-radius: 0.5em;
 }
 .other > p:hover{
@@ -124,7 +131,9 @@ a{
 }
 .other-list{
   visibility: hidden;
-  position: absolute;
+  display: grid !important;
+  position: absolute !important;
+  gap: 0 !important;
   top: 2.2em;
   right: 0;
   background-color: rgb(87 29 0/60%);
@@ -134,12 +143,12 @@ a{
   z-index: 1;
   transition: visibility 1s ease;
 }
-.other-list > p{
+.other-list li{
   line-height: 1.4;
   padding:0.15em 0.5em;
   color: navajowhite;
 }
-.other-list p:hover{
+.other-list li:hover{
   color: black;
   background-color: navajowhite;
 }

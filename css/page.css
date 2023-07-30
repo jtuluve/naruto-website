@@ -111,16 +111,15 @@ body{
 
 
 .topCharactersSection{
-  width: 95vw;
-  display: flex;
-  background-color: black;
+  width: max(320px,86vw);
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(88px,188px));
+  background-color: #000;
   justify-items: center;
-  /* padding: 1em 0; */
-  flex-wrap: wrap;
-  gap: 4em;
+  gap: clamp(15px,4vw,35px) clamp(15px,2vw,25px);
   justify-content: space-evenly;
   max-width: 1072px;
-  margin: 3vw;
+  margin: clamp(10px,3vw,25px);
 }
 
 .famCard{
@@ -128,8 +127,8 @@ body{
   position: relative;
   overflow: hidden;
   border-radius: 5%;
-  width: clamp(109px,15vw,160px);
-  height: clamp(167px,25vw,200px);
+  width: clamp(85px,21vw,160px);
+  height: clamp(105px,13vw,200px);
   background-color: var(--orange);
   cursor: var(--pointer);
   background-size: auto 100%;
@@ -137,7 +136,7 @@ body{
   box-shadow: 1px 1px 9px white;
   transition: all 0.2s ease;
   animation: 0.2s linear 0s infinite alternate pointer;
-  filter: contrast(1.1);
+  filter: contrast(1.05);
 }
 .topCharactersSection:has(.famCard:hover) .famCard:not(:has(:hover)){
   filter:blur(1px);
@@ -157,7 +156,7 @@ body{
   left: 0;
   right: 0;
   bottom: 0;
-  background-image: linear-gradient(0deg, black 0%,transparent, transparent);
+  background-image: linear-gradient(0deg, black 9%,transparent 36%, transparent);
   margin: 0;
   justify-content: flex-end;
   font-size: 16px;
@@ -177,4 +176,7 @@ body{
 /* media queries */
 @media(width<=600){
   /* this is for mcpara */
+}
+@media(width<=1400px){
+  /* for .header */
 }
