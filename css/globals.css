@@ -55,6 +55,7 @@ a:active{
 }
 .menu-wrapper{
   display: flex;
+  /* width:100%; */
   background-color: #5d5d5d38;
   /* background-image: linear-gradient(to right, #ffa11d, #feb855); */
   padding: 0.3em 1em;
@@ -97,10 +98,10 @@ a:active{
   margin-right: auto;
   font-family: "naruto";
   letter-spacing: 0.1vw;
-  font-size: min(3vw,27px);
+  /* font-size: min(3vw,27px); */
   color: white;
   text-shadow: 2px 1px 1px black, -1px 0px 1px white;
-  margin: auto auto auto 0;
+  margin: auto auto auto 10px;
 }
 /* .logo::after{
   position: absolute;

@@ -1,7 +1,7 @@
 import '@css/page.css'
 import { Courgette } from 'next/font/google'
 import Script from 'next/script';
-import FamousChar from "../public/scripts/topCharacters"
+import FamousChar from "@scripts/topCharacters"
 const courgette = Courgette({
   weight: '400',
   subsets: ["latin"]

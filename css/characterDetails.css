@@ -1,0 +1,137 @@
+
+  
+  .characterMainDiv {
+    color:white;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 80%;
+    gap: 30px clamp(5px, 5vw, 50px);
+    border-radius: 10px;
+    box-shadow: 0 0 10px orange;
+    overflow: hidden;
+    margin: 15px auto;
+    grid-template-rows: repeat(2,auto) 1fr;
+    height: fit-content;
+    padding: 15px;
+  }
+  
+  .charName {
+    grid-column: 1/4;
+    margin: 15px 15px;
+    position: relative;
+    width: fit-content;
+  }
+  
+  .charName::after {
+    content: attr(data-sex);
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+  .charList {
+    display: flex;
+    list-style-type: none;
+    gap: clamp(5px, 5vw, 50px);
+    overflow: auto;
+    margin-bottom: 5px;
+    padding: 10px;
+    grid-column: 2/4;
+    position: relative;
+    height: fit-content;
+  }
+  
+  .charList li {
+    border-radius: 99px;
+    border: 1px solid white;
+    padding: 7px 10px;
+    transition: .3s;
+    cursor: var(--pointer);
+    animation: 0.2s linear 0s infinite alternate pointer;
+    white-space: nowrap;
+  }
+  
+  .charList li.active, .charList li:hover {
+    background-color: white;
+    color: black;
+  }
+  
+  .charList::-webkit-scrollbar {
+    width: 0px;
+    height: 7px;
+  }
+  
+  .charList::-webkit-scrollbar-track {
+    background: gray;
+  }
+  
+  .charList::-webkit-scrollbar-thumb {
+    background-color: white;
+    border-radius: 999px;
+    border: 2px solid gray;
+  }
+  
+  .charList::-webkit-scrollbar-thumb:hover {
+    background-color: #c9c9c9;
+  }
+  
+  .charList {
+    scrollbar-width: thin;
+    scrollbar-color: orangered gray;
+  }
+  
+  .charImg {
+    width: clamp(100px, 20vw, 300px);
+    aspect-ratio: .8;
+    background-size: auto 95%;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 2px solid white;
+    border-radius: 10%;
+    justify-self: center;
+    margin: 0 auto;
+    grid-row: 2/4;
+    transition: .5s;
+  }
+  
+  .charImg:hover{
+    transition:1s;
+    background-size: auto 115%;
+  }
+  
+  .charDetails {
+    align-self: flex-start;
+    grid-column: 2/4;
+    display: none;
+    padding: 10px;
+  }
+  
+  .visible {
+    display: block;
+  }
+  
+  .characterDetailsP{
+    line-height: 1.8;
+  }
+
+  .spanh3{
+    display: block;
+    font-size: 130%;
+    margin: 13px 0;
+  }
+
+  @media (width<=700px){
+    .charImg{
+      grid-row:2;
+      grid-column: 1/-1;
+    }
+    .charDetails{
+      grid-column: 1/-1;
+    }
+    .charList{
+      grid-column: 1/-1;
+    }
+    .charName{
+      margin:15px auto;
+      grid-column: 1/-1;
+    }
+  }

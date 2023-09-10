@@ -134,9 +134,9 @@ body{
   background-size: auto 100%;
   background-position: center;
   box-shadow: 1px 1px 9px white;
-  transition: all 0.2s ease;
+  transition: all 0.5s ease;
   animation: 0.2s linear 0s infinite alternate pointer;
-  filter: contrast(1.05);
+  filter: blur(0px);
 }
 .topCharactersSection:has(.famCard:hover) .famCard:not(:has(:hover)){
   filter:blur(1px);
@@ -144,6 +144,7 @@ body{
 .famCard:hover{
   box-shadow: 0px 0px 20px white;
   background-size: auto 107%;
+  transform: scale(1.03);
 }
 .famname{
   color: white;

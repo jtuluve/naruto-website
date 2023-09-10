@@ -24,6 +24,8 @@
       "@scripts/*":["./public/scripts/*"],
       "@css/*":["./css/*"],
       "@/*": ["./*"],
+      "@public/*":["./public/*"],
+      "@data/*":["./public/data/*"],
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
