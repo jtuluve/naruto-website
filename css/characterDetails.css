@@ -26,6 +26,7 @@
     content: attr(data-sex);
     background-size: contain;
     background-repeat: no-repeat;
+    margin-left:3px;
   }
   
   .charList {

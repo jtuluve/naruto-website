@@ -1,10 +1,9 @@
-import CharacterDetails from "@scripts/characterDetails"
+import {CharacterDetails} from "@components/charactersComponents"
 import Script from "next/script"
 import "@css/characterDetails.css"
-export default function Page({params}:any){
-    console.log(params,params.name,decodeURIComponent(params.name))
+export default function Page({params:{name}}:any){
     return <>
-       <CharacterDetails name={decodeURIComponent(params.name)} />
+       <CharacterDetails name={decodeURIComponent(name)} />
        
        <Script src={"/scripts/characterDetailsClientSide.js"}/>
     </>

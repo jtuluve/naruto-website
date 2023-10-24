@@ -1,7 +1,7 @@
 import '@css/page.css'
 import { Courgette } from 'next/font/google'
 import Script from 'next/script';
-import FamousChar from "@scripts/topCharacters"
+import {FamousChars} from "@components/charactersComponents"
 const courgette = Courgette({
   weight: '400',
   subsets: ["latin"]
@@ -27,7 +27,7 @@ export default function Home() {
       <section style={{ backgroundColor: "black", display: "grid", justifyContent: "center", maxWidth: "1200px", margin: "auto", marginTop: "5vw" }}>
         <h1 style={{ justifySelf: "flex-start", marginLeft: "clamp(20px,3vw,60px)", fontSize: "clamp(25px,3vw,70px)", color: "white", letterSpacing: "2px" }}>Top Characters</h1>
         <div className='topCharactersSection'>
-          <FamousChar />
+          <FamousChars />
         </div>
       </section>
       <Script src='scripts/hoverCircle.js' />
